@@ -1,0 +1,40 @@
+<!--this page used for display the product details -->
+<div>
+    <div *ngFor="let item of helperArray;let i=index" >
+    <!-- <span *ngFor="let a of imageURL;let i=index"> -->
+    <div class="body">
+          <div class="img">
+              <div class="imgName">{{imageURL[i*6]}}</div>
+              <div class="imgdisplay">
+                     <img [src]="imageURL[i*6+1]">
+              </div>
+              <div class="deatail"><p class="product_detail_name">Product Details</p>
+                    <div class="product_detail">
+                       <table>
+                           <tr>
+                               <td>Brand :</td>
+                               <td>{{imageURL[i*6+2]}}</td>
+                           </tr>
+                           <tr>
+                            <td>Color :</td>
+                            <td>{{imageURL[i*6+3]}}</td>
+                           </tr>
+
+                           <tr>
+                            <td>Price :</td>
+                            <td>${{imageURL[i*6+5]}}</td>
+                           </tr>
+                           <tr>
+                            <td>Details :</td>
+                            <td>{{imageURL[i*6+4]}}</td>
+                           </tr>
+                       </table> 
+                        
+                    </div>
+                   
+             </div>
+        </div>
+    </div>
+
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="col-md" id="page">
+    <div class="col-md" id="signup">
+        <h4>Fillup Product Details</h4>
+        <form [formGroup]="addProduct" (ngSubmit)="sendData(addProduct)" >
+            <label>Product Name</label><input type="text" formControlName='itemName' class="form-control" placeholder="Product Name" id='itemName' >
+             <span *ngIf="submitted && frm.itemName.errors">
+              product name is required.
+              </span>
+              <br>
+              <label>Brand Name</label><input type="text" formControlName='brandName' placeholder="Brand Name" id='brandName'>
+            <span *ngIf="submitted && frm.brandName.errors">
+               brand name is required.
+             </span>
+           <br>
+             <label>Product Price</label><input type="number" formControlName='price' placeholder="Price" id='price'>
+            <span *ngIf="submitted && frm.price.errors">
+               price is required.
+              </span>
+              <br>
+              <label>Product Color</label><input type="text" formControlName='color' placeholder="Color" id='color'>
+            <span *ngIf="submitted && frm.color.errors">
+                color is required.
+              </span>
+              <br>
+              <table>
+                <tr>
+                  <td class="textarea_col1">
+              <label> Descriptions</label>
+            </td>
+            <td class="textarea_col2">
+              <textarea type="text" formControlName='detail' placeholder="Product Descriptions" id='detail'></textarea>
+            <span *ngIf="submitted && frm.detail.errors">
+               product details is required.
+              </span>
+            </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="submit" value="SUBMIT">
+                </td>
+                <td class="image_button">
+             <div id="upbox">
+                <div id="upload"><p>Upload Picture</p></div>
+                <input #file type="file" (change)="readURL(file.files);" formControlName='image' accept=".png" id="img1"/> 
+             </div>
+            </td>
+              </tr>
+            </table>
+            
+            
+        </form>
+    </div>
+    <div class="img">
+      <img id="image_id" [src]='imgURL' height="150" *ngIf="imgURL"/>   
+    </div>
+</div>
+<!-- here fetching the data form the addCatalogue  -->
+<!-- 
+<app-show-catalogue  [appChildMessage]="productInformations"></app-show-catalogue> -->
