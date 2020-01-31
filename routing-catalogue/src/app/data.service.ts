@@ -4,16 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-  records:any=[];
+  records:any=[]; // this array store the product informatons 
 
   constructor() { }
+
+  // this is getter method
   getData(){
-    
-    console.log(this.records.length);
     return this.records;
   }
+  // this is setter method
   setData(a:any){
     this.records[this.records.length]=a;
   }
-
 }

@@ -1,6 +1,4 @@
-
 .img{
-
     height: 423px;
     width: 305px;
     float: left;
@@ -23,7 +21,6 @@
     font-weight: bold;
     color:white;
 }
-
 img{
     height:100%;
     width:100%;
@@ -60,8 +57,7 @@ img{
     /*font-weight: 100;*/
     color: black;
     font-size: 17px;
-    padding-left: 11px;
-    
+    padding-left: 11px;   
 }
 .product_price{
     width: 35%;
@@ -72,17 +68,13 @@ img{
     text-align: center;
     vertical-align: middle;
     color: teal;
-    
 }
 table{
     font-family: calibri;
     color:#252525;
-   
     width: 100%;
     margin-left:0px;
 }
-td
-
 a{
     color:white;
 }

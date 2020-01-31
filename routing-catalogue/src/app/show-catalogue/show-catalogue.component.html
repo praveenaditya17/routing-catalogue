@@ -1,40 +1,41 @@
 <!--this page used for display the product details -->
 <div>
+    <!-- here uses the helperArray for storing the how many number of product-->
     <div *ngFor="let item of helperArray;let i=index" >
-    <!-- <span *ngFor="let a of imageURL;let i=index"> -->
     <div class="body">
           <div class="img">
+              <!-- display the product name-->
               <div class="imgName">{{imageURL[i*6]}}</div>
               <div class="imgdisplay">
-                     <img [src]="imageURL[i*6+1]">
+                     <img [src]="imageURL[i*6+1]"><!-- display the image -->
               </div>
               <div class="deatail"><p class="product_detail_name">Product Details</p>
                     <div class="product_detail">
                        <table>
                            <tr>
                                <td>Brand :</td>
+                               <!-- display the Brand Name-->
                                <td>{{imageURL[i*6+2]}}</td>
                            </tr>
                            <tr>
-                            <td>Color :</td>
-                            <td>{{imageURL[i*6+3]}}</td>
-                           </tr>
-
-                           <tr>
-                            <td>Price :</td>
-                            <td>${{imageURL[i*6+5]}}</td>
+                                <td>Color :</td>
+                                <!-- display the color of product -->
+                                <td>{{imageURL[i*6+3]}}</td>
                            </tr>
                            <tr>
-                            <td>Details :</td>
-                            <td>{{imageURL[i*6+4]}}</td>
+                                <td>Price :</td>
+                                <!-- display the price of the product -->
+                                <td>${{imageURL[i*6+5]}}</td>
+                           </tr>
+                           <tr>
+                                <td>Details :</td>
+                                <!-- display the details description of the product -->
+                                <td>{{imageURL[i*6+4]}}</td>
                            </tr>
                        </table> 
-                        
-                    </div>
-                   
+                    </div> 
              </div>
         </div>
     </div>
-
     </div>
 </div>

@@ -7,22 +7,19 @@ import { DataService } from '../data.service';
   styleUrls: ['./show-catalogue.component.css']
 })
 export class ShowCatalogueComponent implements OnInit {
-  @Input() appChildMessage: any;
-  imageURL:any=[];
-  helperArray: Array<any>;
+  // @Input() appChildMessage: any;
+  imageURL:any=[];// product records array
+  helperArray: Array<any>;  //helper array stored total number of records
   i:number=0;
+
+  // constructor of the class
   constructor(private service:DataService) {
-    
    }
-   //str:any=localStorage.getItem('key');
+  
   ngOnInit() {
-    //this.str= localStorage.getItem("name");
-      console.log("this is child component............");
+      // here getting the record of product  from the service 
       this.imageURL=this.service.getData();
       this.helperArray = new Array(this.imageURL.length/6);
-      console.log(this.helperArray[0]);
-   // console.log(localStorage.getItem('email'));
-    //  console.log(this.appChildMessage.value.itemName);
   }
 
 }
